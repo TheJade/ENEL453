@@ -1,5 +1,3 @@
--- top_level documentation  
-
 -- 1. Library Declaration 
 ---------------------------------------------------------------
 library IEEE;
@@ -99,14 +97,12 @@ binary_bcd_ins: binary_bcd
       bcd      => bcd         
       );
 		
-s <= SW(9); -- toggle using switch 9 
-		
 MUX2TO1_ins: MUX2TO1
     
 	 PORT MAP (
 		in1 		=>  bcd,  
 		in2		=>  "000" & switch_inputs,
-		s 			=>  s,
+		s 			=>  SW(9),
 		mux_out  =>  mux_out
 		);
 		
